@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+body {
+  background: #0a0a0a;
+  color: #ededed;
+  font-family: Arial, Helvetica, sans-serif;
+  /* Smooth font rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --glass: rgba(255,255,255,0.03);
+}
+
+.main {
+  box-shadow: 0 6px 30px rgba(2,6,23,0.6);
+  @media (width >= 48rem /* 768px */) {
+    max-width: 640px;
+  }
+}
+
+input[type="text"] {
+  padding: 0.75rem 0.9rem;
+  border-radius: 0.6rem;
+  transition: box-shadow 120ms ease, transform 120ms ease, border-color 120ms ease;
+}
+
+input[type="text"]:focus {
+  box-shadow: 0 6px 18px rgba(96,165,250,0.08);
+  @media (width >= 48rem /* 768px */) {
+    transform: translateY(-1px);
+  }
+}
+
+.btn {
+  background: linear-gradient(90deg, #60a5fa, #7c3aed);
+  padding: 0.6rem 0.9rem;
+  border-radius: 0.6rem;
+  transition: transform 120ms ease, box-shadow 120ms ease, opacity 120ms ease;
+}
+
+.btn:hover {
+  opacity: 0.98;
+  @media (width >= 48rem /* 768px */) {
+    transform: translateY(-2px);
+  }
+}
+
+.btn:active {
+  @media (width >= 48rem /* 768px */) {
+    transform: translateY(0);
+  }
+}
+
+.shortened-gradient {
+  color: transparent;
+  background: linear-gradient(90deg, rgba(109, 25, 255, 0.75) 0%, rgba(18, 125, 255, 0.75) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: 600;
+}
+
+.output {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.05));
+  border-radius: 0.6rem;
+  padding: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.copy-btn {
+  padding: 0.45rem;
+  border-radius: 0.45rem;
+  transition: transform 120ms ease;
+}
+
+.copy-btn:hover svg {
+  @media (width >= 48rem /* 768px */) {
+    transform: translateY(-1px);
+  }
+}
+
+.copy-btn:active svg {
+  @media (width >= 48rem /* 768px */) {
+    transform: translateY(0);
+  }
+}
+
+/* QR code container */
+.qr-wrap {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius: 0.75rem;
+}
+
+/* Hide native radio visuals but keep accessible */
+input[type="radio"] { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space:nowrap; border: 0; }
+
+output::-webkit-scrollbar {
+  height: 0px;
+}
