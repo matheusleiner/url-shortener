@@ -77,4 +77,6 @@ Pull requests are welcome! Feel free to open issues or suggest features.
 
 ## 📄 License
 
-This project is licensed under the MIT License.
+This project is released into the public domain under The Unlicense.
+
+You are free to do anything you want with this software, without any restrictions.
